@@ -96,8 +96,8 @@ class MagasinTest {
         app.updateQuality();
         oldApp.updateQuality();
         for (int i = 0; i < items.length; i++) {
-            System.out.println(app.items[i]);
-            System.out.println(oldApp.items[i] + " <------------ old app");
+            /*System.out.println(app.items[i]);
+            System.out.println(oldApp.items[i] + " <------------ old app");*/
 //            System.out.println(resultExpected[i] + " <---- resultat attendu");
             Assertions.assertEquals(oldApp.items[i].quality, app.items[i].quality);
             Assertions.assertEquals(oldApp.items[i].sellIn, app.items[i].sellIn);
