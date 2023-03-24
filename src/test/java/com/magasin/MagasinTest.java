@@ -51,7 +51,8 @@ class MagasinTest {
                 new Item("mon item", 15, 10),
                 new Item("mon item", 10, 10),
                 new Item("mon item", 5, 10),
-                new Item("mon item", 0, 10)
+                new Item("mon item", 0, 10),
+
         };
         Magasin app = new Magasin(items);
         app.updateQuality();

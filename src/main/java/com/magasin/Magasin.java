@@ -11,59 +11,76 @@ class Magasin {
         for (int i = 0; i < items.length; i++) {
 
             if (items[i].name.equals("Kryptonite")) {
-                items[i].quality = 80;
-                items[i].sellIn = 9001;
+                kryptonite(i);
             }
             else if (items[i].name.equals("Comté")) {
-                items[i].quality += 1;
-                items[i].sellIn -= 1;
-                if (items[i].sellIn < 0) {
-                    items[i].quality += 1;
-                }
-                if (items[i].quality > 50) {
-                    items[i].quality = 50;
-                }
+                cheese(i);
             }
             else if (items[i].name.equals("Pass VIP Concert")) {
-
-                if (items[i].quality > 50) {
-                    items[i].quality = 50;
-                }
-                else if (items[i].sellIn < 0) {
-                    items[i].quality = 0;
-                }
-                else if (items[i].sellIn < 6) {
-                    items[i].quality += 3;
-                }
-                else if (items[i].sellIn < 11) {
-                    items[i].quality += 2;
-                }
-                else {
-                    items[i].quality += 1;
-                    items[i].sellIn -= 1;
-                }
+                pssVIP(i);
             }
             else if (items[i].name.equals("Pouvoirs magiques")) {
-                items[i].quality -= 2;
-                items[i].sellIn -= 1;
-                if (items[i].sellIn < 0) {
-                    items[i].quality -= 2;
-                }
-                if (items[i].quality > 50) {
-                    items[i].quality = 50;
-                }
+                magicPower(i);
             }
             else {
-                items[i].quality -= 1;
-                items[i].sellIn -= 1;
-                if (items[i].sellIn < 0) {
-                    items[i].quality -= 1;
-                }
-                if (items[i].quality > 50) {
-                    items[i].quality = 50;
-                }
+                defaultItem(i);
             }
         }
+    }
+
+    private void defaultItem(int i) {
+        items[i].quality -= 1;
+        items[i].sellIn -= 1;
+        if (items[i].sellIn < 0) {
+            items[i].quality -= 1;
+        }
+        if (items[i].quality > 50) {
+            items[i].quality = 50;
+        }
+    }
+
+    private void magicPower(int i) {
+        items[i].quality -= 2;
+        items[i].sellIn -= 1;
+        if (items[i].sellIn < 0) {
+            items[i].quality -= 2;
+        }
+        if (items[i].quality > 50) {
+            items[i].quality = 50;
+        }
+    }
+
+    private void pssVIP(int i) {
+        items[i].quality += 1;
+        items[i].sellIn -= 1;
+        if (items[i].sellIn < 11) {
+            items[i].quality += 1;
+        }
+        if (items[i].sellIn < 6) {
+            items[i].quality += 1;
+        }
+        if (items[i].sellIn < 0) {
+            items[i].quality = 0;
+        }
+        if (items[i].quality > 50) {
+            items[i].quality = 50;
+        }
+    }
+
+    private void cheese(int i) {
+        items[i].quality += 1;
+        items[i].sellIn -= 1;
+        if (items[i].sellIn < 0) {
+            items[i].quality += 1;
+        }
+        if (items[i].quality > 50) {
+            items[i].quality = 50;
+        }
+    }
+
+    private void kryptonite(int i) {
+        items[i].quality = 80;
+        items[i].sellIn = 9001;
     }
 }
 /*public void updateQuality() {
