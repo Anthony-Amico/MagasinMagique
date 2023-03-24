@@ -54,12 +54,12 @@ class MagasinTest {
                 new Item("mon item", 5, 10),
                 new Item("mon item", -1, 10),
                 new Item("mon item", 0, 50),
-               /* new Item("Pouvoirs magiques", 0, 0),
+                new Item("Pouvoirs magiques", 0, 0),
                 new Item("Pouvoirs magiques", 5, 10),
                 new Item("Pouvoirs magiques", 10, 60),
                 new Item("Pouvoirs magiques", 10, 60),
                 new Item("Pouvoirs magiques", 0, 40),
-                new Item("Pouvoirs magiques", 12, 30),*/
+                new Item("Pouvoirs magiques", 12, 30),
 
         };
         Item[] oldItems = new Item[] {
@@ -84,13 +84,12 @@ class MagasinTest {
                 new Item("mon item", 5, 10),
                 new Item("mon item", -1, 10),
                 new Item("mon item", 0, 50),
-               /* new Item("Pouvoirs magiques", 0, 0),
+                new Item("Pouvoirs magiques", 0, 0),
                 new Item("Pouvoirs magiques", 5, 10),
                 new Item("Pouvoirs magiques", 10, 60),
                 new Item("Pouvoirs magiques", 10, 60),
                 new Item("Pouvoirs magiques", 0, 40),
                 new Item("Pouvoirs magiques", 12, 30),
-*/
         };
         Magasin app = new Magasin(items);
         OldMagasin oldApp = new OldMagasin(oldItems);
