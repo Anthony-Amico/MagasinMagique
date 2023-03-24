@@ -9,7 +9,6 @@ class Magasin {
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
-
             if (items[i].name.equals("Kryptonite")) {
                 kryptonite(i);
             }
@@ -25,18 +24,21 @@ class Magasin {
             else {
                 defaultItem(i);
             }
+            if (items[i].quality<0){
+                items[i].quality=0;
+            }
         }
     }
 
     private void defaultItem(int i) {
         items[i].quality -= 1;
-        items[i].sellIn -= 1;
         if (items[i].sellIn < 0) {
             items[i].quality -= 1;
         }
         if (items[i].quality > 50) {
             items[i].quality = 50;
         }
+        items[i].sellIn -= 1;
     }
 
     private void magicPower(int i) {
@@ -52,7 +54,6 @@ class Magasin {
 
     private void pssVIP(int i) {
         items[i].quality += 1;
-        items[i].sellIn -= 1;
         if (items[i].sellIn < 11) {
             items[i].quality += 1;
         }
@@ -65,17 +66,18 @@ class Magasin {
         if (items[i].quality > 50) {
             items[i].quality = 50;
         }
+        items[i].sellIn -= 1;
     }
 
     private void cheese(int i) {
         items[i].quality += 1;
-        items[i].sellIn -= 1;
         if (items[i].sellIn < 0) {
             items[i].quality += 1;
         }
         if (items[i].quality > 50) {
             items[i].quality = 50;
         }
+        items[i].sellIn -= 1;
     }
 
     private void kryptonite(int i) {

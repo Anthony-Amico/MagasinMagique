@@ -47,11 +47,11 @@ class MagasinTest {
                 new Item("Pass VIP Concert", 5, 10),
                 new Item("Pass VIP Concert", 2, 10),
                 new Item("Pass VIP Concert", 1, 10),
-                new Item("Pass VIP Concert", 0, 10),
+                new Item("Pass VIP Concert", 0, 0),
                 new Item("mon item", 15, 10),
                 new Item("mon item", 10, 10),
                 new Item("mon item", 5, 10),
-                new Item("mon item", 0, 10),
+                new Item("mon item", 5, 10),
 
         };
         Magasin app = new Magasin(items);
